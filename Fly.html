@@ -1,0 +1,179 @@
+<!DOCTYPE>
+<html>
+
+<head>
+<style>
+
+body {
+background-color:black;}
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: -100% 0; }
+}
+
+#background	{ 
+	z-index:0;
+	width: 200%; 
+	height: 9000px; 
+	background-image: url("images/back.jpg");
+	background-position: 0px 0px;
+	background-repeat: repeat;
+	transform: x;
+	animation: animatedBackground 8s linear infinite;
+	}
+
+div #planet	{ 
+	
+	
+	position: absolute; 
+	height:70px;
+	width:70px;
+	left:100%;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedobstacles 8s linear infinite;
+}
+@keyframes animatedobstacles {
+
+	to {left:-100%}
+}
+div #planet1	{ 
+	
+	
+	position: absolute; 
+	top:150px;
+	height:70px;
+	width:70px;
+	left:100%;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedobstacles 10s linear infinite;
+}
+@keyframes animatedobstacles {
+
+	to {left:-100%}
+}
+
+div #planet2	{ 
+	
+	
+	position: absolute; 
+	top:300px;
+	height:70px;
+	width:70px;
+	left:100%;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedobstacles 12s linear infinite;
+}
+@keyframes animatedobstacles {
+
+	to {left:-100%}
+}
+div #planet3{ 
+	
+	
+	position: absolute; 
+	top:450px;
+	height:70px;
+	width:70px;
+	left:80%;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedobstacles 15s linear infinite;
+}
+@keyframes animatedobstacles {
+
+	to {left:-100%}
+}
+
+div #rock{ 
+	
+	
+	position: absolute; 
+	top:350px;
+	height:70px;
+	width:70px;
+	left:120%;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedobstacles 16s linear infinite;
+}
+	
+	@keyframes ball2 {
+			0% {margin-left: 300px; top:400px}
+			25% {top:300px}
+			50% {top:400px}
+			75% {top:500px}
+			100% {margin-left: -100%; top:300px}
+}
+div #ball{ 
+	
+	
+	position: absolute; 
+	top:400px;
+	height:70px;
+	width:70px;
+	left:80%;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation-name: ball2;
+	animation: ball2 5s linear infinite;
+}
+	
+@keyframes ball2 {
+
+			0% {margin-left: 300px; top:400px}
+			25% {top:300px}
+			50% {top:400px}
+			75% {top:500px}
+			100% {margin-left: -100%; top:300px}
+}
+div #ball2{ 
+	
+	
+	position: absolute; 
+	top:200px;
+	height:70px;
+	width:70px;
+	left:80%;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation-name: ball2;
+	animation: ball2 8s linear infinite;
+}
+
+
+
+body {
+    overflow:hidden;
+}
+
+ 
+  
+
+</style>
+<script src="moving.js"></script>
+
+</head>
+<body onload="gameLoop();" onkeydown="" onkeyup="moveSelection(event)" >
+<embed src="superman.mp3" autostart="true" loop="true"
+width="2" height="0">
+</embed>
+<div id="background">
+<div ><img id="planet" src="images/planet.png"/ ></div>
+<div ><img id="planet1" src="images/planet1.png"/ ></div>
+<div ><img id="planet2" src="images/planet2.png"/ ></div>
+<div ><img id="planet3" src="images/planet3.png"/ ></div>
+<div ><img id="rock" src="images/rock.png"/ ></div>
+
+ <img id="super" src="images/1super.png" style="position: absolute; left: 15; right: 15; top: 15; bottom: auto; " height="120px" width="200px;overflow:auto;">
+<div style="clear: both;" />
+</div> 
+<div ><img id="ball" src="images/enemy.png"/ ></div>
+<div ><img id="ball2" src="images/enemy.png"/ ></div>
+
+</div>
+
+</body>
+</html>
