@@ -47,7 +47,7 @@ div #planet1	{
 	left:100%;
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
-	animation: animatedobstacles 10s linear infinite;
+	animation: animatedobstacles 16s linear infinite;
 }
 @keyframes animatedobstacles {
 
@@ -118,7 +118,7 @@ div #ball{
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 	animation-name: ball2;
-	animation: ball2 5s linear infinite;
+	animation: ball2 10s linear infinite;
 }
 	
 @keyframes ball2 {
@@ -148,7 +148,10 @@ div #ball2{
 body {
     overflow:hidden;
 }
-
+#pause {
+-webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+    animation-play-state: paused;
+}
  
   
 
@@ -160,6 +163,7 @@ body {
 <embed src="superman.mp3" autostart="true" loop="true"
 width="2" height="0">
 </embed>
+<div id="pause">
 <div id="background">
 <div ><img id="planet" src="images/planet.png"/ ></div>
 <div ><img id="planet1" src="images/planet1.png"/ ></div>
@@ -174,6 +178,6 @@ width="2" height="0">
 <div ><img id="ball2" src="images/enemy.png"/ ></div>
 
 </div>
-
+</div>
 </body>
 </html>
